@@ -5,6 +5,7 @@ var config = {
     entry: {
         app: [
             './src/datapointMatrix.js',
+            './src/dpMatrix.controller.js',
             './src/edit.html',
             './src/view.html'
         ],
