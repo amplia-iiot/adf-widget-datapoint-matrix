@@ -34,12 +34,12 @@ angular.module('adf.widget.datapointMatrix', ['adf.provider'])
                 title: 'Show datapoints as matrix effect',
                 description: 'Show datapoints as matrix effect',
                 controller: 'dpMatrixController',
-                templateUrl: __webpack_require__(0),
+                template: __webpack_require__(0),
                 category: 'Victor\'s Category',
                 reload: true,
                 edit: {
                     immediate: true,
-                    templateUrl: __webpack_require__(1)
+                    template: __webpack_require__(1)
                 }
             });
     });
