@@ -27,7 +27,7 @@ module.exports = __webpack_require__(0);
 "use strict";
 
 
-angular.module('adf.widget.datapointMatrix', ['adf.provider'])
+angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
     .config(function(dashboardProvider) {
         dashboardProvider
             .widget('datapointMatrix', {

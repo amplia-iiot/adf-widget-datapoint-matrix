@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('adf.widget.datapointMatrix', ['adf.provider'])
+angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
     .config(function(dashboardProvider) {
         dashboardProvider
             .widget('datapointMatrix', {
