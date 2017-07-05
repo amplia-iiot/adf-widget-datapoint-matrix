@@ -8,7 +8,7 @@ var config = {
             './src/edit.html',
             './src/view.html'
         ],
-        vendor: ['angular-google-chart']
+        vendor: ['angular-matrix']
     },
     output: {
         path: path.join(__dirname, "build"),
