@@ -147,20 +147,20 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 5:
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(6);
+module.exports = __webpack_require__(11);
 
 
 /***/ }),
 
-/***/ 6:
+/***/ 11:
 /***/ (function(module, exports) {
 
 angular.module('angular-matrix', [])
@@ -176,8 +176,8 @@ angular.module('angular-matrix', [])
                 var ctx = c.getContext("2d");
 
                 //making the canvas full screen
-                c.height = window.innerHeight;
-                c.width = window.innerWidth;
+                c.height = jQuery(element).parents('.panel-body')[0].offsetWidth * 9 / 16;
+                c.width = jQuery(element).parents('.panel-body')[0].offsetWidth;
 
                 //chinese characters - taken from the unicode charset
 

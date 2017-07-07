@@ -9,7 +9,9 @@
     ],
     "description": "Show datapoints as matrix effect",
     "dependencies": {
-        "angular-matrix": "^1.0.1"
+        "angular-matrix": "1.1.x",
+        "css-loader": "^0.28.4",
+        "style-loader": "^0.18.2"
     },
     "scripts": {
         "bundle": "webpack"

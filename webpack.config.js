@@ -6,6 +6,7 @@ var config = {
         app: [
             './src/datapointMatrix.js',
             './src/dpMatrix.controller.js',
+            './src/styles.css',
             './src/edit.html',
             './src/view.html'
         ],
@@ -17,13 +18,13 @@ var config = {
     },
     module: {
         loaders: [{
-                test: /\.css$/,
-                loader: 'style!css',
+                test: /\.html$/,
+                loader: "html-loader",
                 exclude: /node_modules/
             },
             {
-                test: /\.html$/,
-                loader: "html-loader",
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
                 exclude: /node_modules/
             }
         ]
