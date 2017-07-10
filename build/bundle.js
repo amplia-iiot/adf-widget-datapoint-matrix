@@ -2,7 +2,7 @@ webpackJsonp([0],[
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-matrix ng-if=\"config.text\" config=\"config\"></ng-matrix>";
+module.exports = "<ng-matrix ng-if=\"config.texts\" config=\"config\"></ng-matrix>";
 
 /***/ }),
 /* 1 */
@@ -32,12 +32,11 @@ angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
     .config(function(dashboardProvider) {
         dashboardProvider
             .widget('datapointMatrix', {
-                title: 'Show datapoints as matrix effect',
-                description: 'Show datapoints as matrix effect',
+                title: 'Show text as matrix effect',
+                description: 'Show text as matrix effect',
                 controller: 'dpMatrixController',
                 template: __webpack_require__(0),
-                category: 'Victor\'s Category',
-                reload: true,
+                category: 'User\'s Category',
                 edit: {
                     immediate: true,
                     template: __webpack_require__(1)
@@ -53,13 +52,10 @@ angular.module('adf.widget.datapointMatrix')
     .controller('dpMatrixController', function($scope, $timeout) {
         $scope.config = {
             id: 'canvasId',
-            text: $scope.config.text,
+            texts: [$scope.config.text],
             fontSize: 12,
             speed: 100
         };
-        /*$timeout(function() {
-            $scope.config.text = '123456789 ';
-        }, 5000);*/
     });
 
 /***/ }),

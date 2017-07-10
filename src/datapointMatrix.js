@@ -4,12 +4,11 @@ angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
     .config(function(dashboardProvider) {
         dashboardProvider
             .widget('datapointMatrix', {
-                title: 'Show datapoints as matrix effect',
-                description: 'Show datapoints as matrix effect',
+                title: 'Show text as matrix effect',
+                description: 'Show text as matrix effect',
                 controller: 'dpMatrixController',
                 template: require('./view.html'),
-                category: 'Victor\'s Category',
-                reload: true,
+                category: 'User\'s Category',
                 edit: {
                     immediate: true,
                     template: require('./edit.html')
