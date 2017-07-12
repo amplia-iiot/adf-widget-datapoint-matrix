@@ -1713,13 +1713,13 @@ once@^1.3.0, once@^1.3.3:
   dependencies:
     wrappy "1"
 
-"opengate-angular-dashboard-framework@https://github.com/amplia-iiot/opengate-angular-dashboard-framework.git#v2.3.0":
-  version "2.3.0"
-  resolved "https://github.com/amplia-iiot/opengate-angular-dashboard-framework.git#f8443761aeca93ebd61f15011c6662370f37ec80"
+opengate-angular-dashboard-framework@v2.4.x:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/opengate-angular-dashboard-framework/-/opengate-angular-dashboard-framework-2.4.0.tgz#9d056632462b7aa751c934dedac06d208af8f964"
 
-"opengate-angular-js@https://github.com/amplia-iiot/opengate-angular-js.git#v0.1.0":
-  version "0.1.0"
-  resolved "https://github.com/amplia-iiot/opengate-angular-js.git#d2e951ed914c282882910b8634603b0c38634e46"
+opengate-angular-js@v0.2.x:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/opengate-angular-js/-/opengate-angular-js-0.2.0.tgz#9184a962b97c1b1aea784e79b1e400f73fc9ac94"
 
 optimist@~0.6.0:
   version "0.6.1"
@@ -2601,6 +2601,10 @@ tough-cookie@~2.3.0:
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
+
+tty@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tty/-/tty-1.0.1.tgz#e4409ac98b0dd1c50b59ff38e86eac3f0764ee45"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"

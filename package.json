@@ -14,13 +14,17 @@
         "style-loader": "^0.18.2"
     },
     "scripts": {
-        "bundle": "webpack"
+        "bundle": "webpack",
+        "register": "node scripts/register",
+        "update": "node scripts/update",
+        "delete": "node scripts/delete"
     },
     "devDependencies": {
         "angular": "^1.6.5",
         "html-loader": "^0.4.5",
-        "opengate-angular-dashboard-framework": "https://github.com/amplia-iiot/opengate-angular-dashboard-framework.git#v2.3.0",
-        "opengate-angular-js": "https://github.com/amplia-iiot/opengate-angular-js.git#v0.1.0",
+        "opengate-angular-dashboard-framework": "v2.4.x",
+        "opengate-angular-js": "v0.2.x",
+        "request": "^2.81.0",
         "webpack": "^3.0.0",
         "wiredep": "~2.2.2"
     }
