@@ -1,32 +1,13 @@
 webpackJsonp([0],[
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<ng-matrix ng-if=\"config.texts\" config=\"config\"></ng-matrix>";
+module.exports = __webpack_require__(1);
+
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-module.exports = "<form role=\"form\">\n    <div class=\"form-group\">\n        <label for=\"sample\">Sample text</label>\n        <input type=\"text\" class=\"form-control\" id=\"text\" ng-model=\"config.text\" placeholder=\"Enter sample text\">\n    </div>\n</form>";
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(3);
-__webpack_require__(4);
-__webpack_require__(5);
-__webpack_require__(1);
-module.exports = __webpack_require__(0);
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 
 angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
     .config(function(dashboardProvider) {
@@ -35,28 +16,42 @@ angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
                 title: 'Show text as matrix effect',
                 description: 'Show text as matrix effect',
                 controller: 'dpMatrixController',
-                template: __webpack_require__(0),
+                template: __webpack_require__(2),
                 category: 'User\'s Category',
                 edit: {
                     immediate: true,
-                    template: __webpack_require__(1)
+                    template: __webpack_require__(3)
                 }
             });
     });
+
+__webpack_require__(4);
+__webpack_require__(5);
+__webpack_require__(10);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+var v1='<ng-matrix ng-if=config.texts config=config></ng-matrix><div ng-include src="\'/view/src/footer.html\'"></div>';
+angular.module('adf.widget.datapointMatrix').run(['$templateCache', function ($templateCache) {$templateCache.put('/view/src/view.html', v1);}]);
+module.exports=v1
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+var v1='<form role=form><div class=form-group><label for=sample>Sample text</label><input type=text class=form-control id=text ng-model=config.text placeholder="Enter sample text"></div></form>';
+angular.module('adf.widget.datapointMatrix').run(['$templateCache', function ($templateCache) {$templateCache.put('/view/src/edit.html', v1);}]);
+module.exports=v1
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-angular.module('adf.widget.datapointMatrix')
-    .controller('dpMatrixController', function($scope, $timeout) {
-        $scope.config = {
-            id: 'canvasId',
-            texts: [$scope.config.text],
-            fontSize: 12,
-            speed: 100
-        };
-    });
+var v1='<div>FUNCIONA!</div>';
+angular.module('adf.widget.datapointMatrix').run(['$templateCache', function ($templateCache) {$templateCache.put('/view/src/footer.html', v1);}]);
+module.exports=v1
 
 /***/ }),
 /* 5 */
@@ -639,5 +634,19 @@ module.exports = function (css) {
 };
 
 
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+angular.module('adf.widget.datapointMatrix')
+    .controller('dpMatrixController', function($scope, $timeout) {
+        $scope.config = {
+            id: 'canvasId',
+            texts: [$scope.config.text],
+            fontSize: 12,
+            speed: 100
+        };
+    });
+
 /***/ })
-],[2]);
+],[0]);

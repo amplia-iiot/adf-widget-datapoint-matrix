@@ -21,6 +21,7 @@
     },
     "devDependencies": {
         "angular": "^1.6.5",
+        "angular-templatecache-loader": "^0.2.0",
         "html-loader": "^0.4.5",
         "opengate-angular-dashboard-framework": "v2.4.x",
         "opengate-angular-js": "v0.2.x",

@@ -4,11 +4,7 @@ var path = require("path");
 var config = {
     entry: {
         app: [
-            './src/datapointMatrix.js',
-            './src/dpMatrix.controller.js',
-            './src/styles.css',
-            './src/edit.html',
-            './src/view.html'
+            './src/datapointMatrix.js'
         ],
         vendor: ['angular-matrix']
     },
@@ -18,14 +14,13 @@ var config = {
     },
     module: {
         loaders: [{
-                test: /\.html$/,
-                loader: "html-loader",
-                exclude: /node_modules/
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.html$/,
+                loader: "angular-templatecache-loader?module=adf.widget.datapointMatrix&prefix=/view"
             }
         ]
     },
