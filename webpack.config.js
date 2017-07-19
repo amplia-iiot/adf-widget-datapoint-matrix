@@ -20,7 +20,7 @@ var config = {
             },
             {
                 test: /\.html$/,
-                loader: "angular-templatecache-loader?module=adf.widget.datapointMatrix&prefix=/view"
+                loader: "angular-templatecache-loader?module=adf.widget.datapointMatrix"
             }
         ]
     },
