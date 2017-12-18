@@ -4,13 +4,13 @@ var request = require('request'),
 
 module.exports.register = function(config, sessionId) {
     var post_req = createRequest('POST', sessionId, config, nameWidget);
-    var form = createForm(post_req);
+  var form = createForm(post_req, config.meta);
     form.append('name', nameWidget);
 }
 
 module.exports.update = function(config, sessionId) {
     var put_req = createRequest('PUT', sessionId, config, nameWidget);
-    createForm(put_req);
+  createForm(put_req, config.meta);
 }
 
 module.exports.delete = function(config, sessionId) {
@@ -18,8 +18,9 @@ module.exports.delete = function(config, sessionId) {
     delete_req.end();
 }
 
-function createForm(request) {
+function createForm(request, metaFile) {
     var form = request.form();
+  form.append('meta', fs.createReadStream(process.cwd() + '/' + metaFile));
     form.append('bundle', fs.createReadStream(process.cwd() + '/build/bundle.js'));
     form.append('vendor', fs.createReadStream(process.cwd() + '/build/vendor.bundle.js'));
     return form;
@@ -27,7 +28,7 @@ function createForm(request) {
 
 function createRequest(type, sessionId, config, nameWidget) {
     var requestConfig = {
-        url: 'http://' + config.host + ':' + config.port + '/api/wiwi/' + config.domain + '/widgets',
+    url: 'http://' + config.host + ':' + config.port + '/api/wiwi/' + config.domain + '/bundles',
         headers: {
             "Cookie": [sessionId]
         }
@@ -55,6 +56,9 @@ function Request() {
         console.log('StatusCode:' + res.statusCode);
         if (res.statusCode === 201)
             console.log('Location:' + res.headers['location']);
+    else {
+      console.log('Error: ' + JSON.stringify(res));
+    }
     });
     this.on('data', function(chunk) {
         str += chunk;

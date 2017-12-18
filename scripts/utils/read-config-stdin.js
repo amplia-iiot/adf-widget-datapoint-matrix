@@ -1,15 +1,20 @@
 var stdin = process.openStdin();
 var labels = {
-    host: 'Type opengate-ux host (v8.opengate.es):',
-    port: 'Type web port (80):',
+  host: 'Type opengate-ux host (localhost):',
+  port: 'Type web port (3000):',
     domain: "Type your domain:",
     user: "Type your user name:",
     password: "Type your password:"
 }
 
+var defaults = {
+  host: 'localhost',
+  meta: 'meta-widget.json',
+  port: '3000'
+}
 module.exports.readConfiguration = function(cb) {
     var keys = Object.keys(labels).reverse();
-    readNextKey(keys, labels, {}, cb);
+  readNextKey(keys, labels, defaults, cb);
 };
 
 function readNextKey(keys, labels, config, cb) {
@@ -30,6 +35,9 @@ function readNextKey(keys, labels, config, cb) {
 
     function valueTyped(value) {
         stdin.removeAllListeners('data');
+    if (value.length === 0) {
+      value = defaults[key];
+    }
         config[key] = value;
         if (keys.length > 0) {
             readNextKey(keys, labels, config, cb);
