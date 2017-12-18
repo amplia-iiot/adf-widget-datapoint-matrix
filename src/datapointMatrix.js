@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
     .config(function(dashboardProvider) {
         dashboardProvider
@@ -15,3 +13,6 @@ angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
                 }
             });
     });
+
+require('./styles.css');
+require('./dpMatrix.controller');
