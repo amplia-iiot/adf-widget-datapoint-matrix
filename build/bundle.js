@@ -7,26 +7,33 @@ module.exports = __webpack_require__(1);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_style_less__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_style_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_style_less__);
+
 
 angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
-    .config(function(dashboardProvider) {
-        dashboardProvider
-            .widget('datapointMatrix', {
-                title: 'Show text as matrix effect',
-                description: 'Show text as matrix effect',
-                controller: 'dpMatrixController',
-                template: __webpack_require__(2),
-                category: 'User\'s Category',
-                edit: {
-                    immediate: true,
-                    template: __webpack_require__(3)
-                }
-            });
-    });
+  .config(function (dashboardProvider) {
+    dashboardProvider
+      .widget('datapointMatrix', {
+        title: 'Show text as matrix effect',
+        description: 'Show text as matrix effect',
+        controller: 'dpMatrixController',
+        template: __webpack_require__(2),
+        category: 'User\'s Category',
+        edit: {
+          immediate: true,
+          template: __webpack_require__(3)
+        }
+      });
+  });
 
-__webpack_require__(4);
+
 __webpack_require__(9);
+
 
 /***/ }),
 /* 2 */
@@ -65,8 +72,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./styles.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./styles.css");
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./style.less", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./style.less");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -84,7 +91,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "div[adf-widget-type=\"datapointMatrix\"] div.panel-body {\r\n    padding: 0px;\r\n}", ""]);
+exports.push([module.i, "div[adf-widget-type=\"datapointMatrix\"] div.panel-body {\n  padding: 0px;\n}\n", ""]);
 
 // exports
 
@@ -627,17 +634,20 @@ module.exports = function (css) {
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 angular.module('adf.widget.datapointMatrix')
-    .controller('dpMatrixController', function($scope, $timeout) {
-        $scope.config = {
-            id: 'canvasId',
-            texts: [$scope.config.text],
-            fontSize: 12,
-            speed: 100
-        };
-    });
+  .controller('dpMatrixController', function ($scope) {
+    $scope.config = {
+      id: 'canvasId',
+      texts: [$scope.config.text],
+      fontSize: 12,
+      speed: 100
+    };
+  });
+
 
 /***/ })
 ],[0]);

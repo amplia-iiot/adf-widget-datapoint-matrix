@@ -1,18 +1,20 @@
-angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
-    .config(function(dashboardProvider) {
-        dashboardProvider
-            .widget('datapointMatrix', {
-                title: 'Show text as matrix effect',
-                description: 'Show text as matrix effect',
-                controller: 'dpMatrixController',
-                template: require('./view.html'),
-                category: 'User\'s Category',
-                edit: {
-                    immediate: true,
-                    template: require('./edit.html')
-                }
-            });
-    });
+'use strict';
 
-require('./styles.css');
-require('./dpMatrix.controller');
+angular.module('adf.widget.datapointMatrix', ['adf.provider', 'angular-matrix'])
+  .config(function (dashboardProvider) {
+    dashboardProvider
+      .widget('datapointMatrix', {
+        title: 'Show text as matrix effect',
+        description: 'Show text as matrix effect',
+        controller: 'dpMatrixController',
+        template: require('./view.html'),
+        category: 'User\'s Category',
+        edit: {
+          immediate: true,
+          template: require('./edit.html')
+        }
+      });
+  });
+
+import './css/style.less';
+require('./controller/dpMatrix.controller');

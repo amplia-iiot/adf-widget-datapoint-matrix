@@ -5,12 +5,15 @@
     "dashboard",
     "widget",
     "adf",
-    "adf-widget"
+    "adf-widget",
+    "adf-widget-datapoint-matrix"
   ],
   "description": "Show datapoints as matrix effect",
   "dependencies": {
     "angular-matrix": "1.2.x",
     "css-loader": "^0.28.4",
+    "less": "^3.8.1",
+    "less-loader": "^4.0.5",
     "style-loader": "^0.18.2"
   },
   "scripts": {
