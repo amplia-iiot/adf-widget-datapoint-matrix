@@ -1,6 +1,10 @@
 # adf-widget-datapointMatrix
 
+Example project of a WIWI type widget
+
 ## Getting started
+
+**Clone the project**
 
 **Installing all dependencies of project**
 
@@ -49,8 +53,17 @@ npm run delete
 
 They will ask for the following information:
 
-1. host: default localhost
-2. port: default 3000
-3. domain: domain of user that exists in the platform OpenGate
-4. user name: user that exists in the platform OpenGate
-5. password: password of user
+1. Type url of api-web (http://localhost:3977): default http://localhost:3977
+2. domain: domain of user that exists in the platform OpenGate
+3. user name: user that exists in the platform OpenGate
+4. password: password of user
+
+## Notes of version
+
+**1.0.0**
+
+This version is compatible with opengate-web version 2.11.1 < 6.0.0
+
+**2.0.0**
+
+This version is compatible with opengate-web version >= 6.0.0
